@@ -22,7 +22,7 @@ public class MainActivity extends Activity {
 	View parent;
 	private int[] images = {R.drawable.i1,R.drawable.i2,R.drawable.i3,R.drawable.i4,
 			R.drawable.i5,R.drawable.i6,R.drawable.i7,R.drawable.i8};
-	private String[] names = {"搜索", "文件管理", "下载管理", "全屏", "网址", "书签", "加入书签", "分享页面"};
+	private String[] names = {"鎼滅储", "鏂囦欢绠＄悊", "涓嬭浇绠＄悊", "鍏ㄥ睆", "缃戝潃", "涔︾", "鍔犲叆涔︾", "鍒嗕韩椤甸潰"};
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +36,9 @@ public class MainActivity extends Activity {
         
     	popupWindow = new PopupWindow(contentView, ViewGroup.LayoutParams.MATCH_PARENT,
     			ViewGroup.LayoutParams.WRAP_CONTENT);
-    	popupWindow.setFocusable(true);//取得焦点
+    	popupWindow.setFocusable(true);//鍙栧緱鐒︾偣
+    	 // 濡傛灉涓嶈缃甈opupWindow鐨勮儗鏅紝鏃犺鏄偣鍑诲閮ㄥ尯鍩熻繕鏄疊ack閿兘鏃犳硶dismiss寮规
+        // 鎴戣寰楄繖閲屾槸API鐨勪竴涓猙ug
     	popupWindow.setBackgroundDrawable(new BitmapDrawable());
     	popupWindow.setAnimationStyle(R.style.animation);
     	
@@ -45,7 +47,7 @@ public class MainActivity extends Activity {
     
     private final class ItemClickListener implements OnItemClickListener{
 		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-			if(popupWindow.isShowing()) popupWindow.dismiss();//关闭
+			if(popupWindow.isShowing()) popupWindow.dismiss();//鍏抽棴
 			//....
 		}    	
     }
